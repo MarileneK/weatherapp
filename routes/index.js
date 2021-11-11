@@ -14,6 +14,12 @@ const cityList = [
     min_temp: 5,
     max_temp: 15
   },
+  {
+    city: 'Marseille',
+    img: 'url',
+    min_temp: 15,
+    max_temp: 20
+  }
 ];
 
 /* GET home page. */
@@ -22,9 +28,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/weather', function(req, res, next) {
-  // for (let i = 0; i < cityList.length; i ++) {
-  //   return cityList[i].city
-  // }
   res.render('weather', { cityList })
 })
 

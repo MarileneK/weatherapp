@@ -37,9 +37,15 @@
                 <p>Update cities</p>
 
                 <div class="card" style="width: 30rem;">
+                    <% if(cityList.length == 0) { %>
+                        <p>No cities found</p>
+                    <% } %>
                     <ul class="list-group list-group-flush">
+                        <% for (let i = 0; i < cityList.length ; i++) { %>
+                        <li class="list-group-item"><%= cityList[i].name %> <%= cityList[i].min_temp %>°c <%= cityList[i].max_temp %>°c
+                        </li>
+                        <% } %>
                       <li class="list-group-item">City - Nuageux + Clouds + Temp - <i class="far fa-trash-alt"></i></li>
-                      <li class="list-group-item"></li>
                     </ul>
                   </div>
             </div>
